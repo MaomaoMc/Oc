@@ -1,0 +1,315 @@
+@charset "UTF-8";
+div.priceItems {
+  height: 2.57rem;
+  background-image: url(../../img/head_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%; }
+  div.priceItems div {
+    flex-grow: 1;
+    /* default 0 */ }
+  div.priceItems div.price {
+    line-height: .75rem;
+    text-indent: .35rem;
+    color: #ffde00; }
+  div.priceItems div.items {
+    color: white;
+    padding-top: .35rem; }
+    div.priceItems div.items p {
+      line-height: .3rem; }
+
+ul.deal_tab {
+  width: 3.09rem;
+  height: .365rem;
+  border: .01rem solid #3c82ff;
+  border-radius: .5rem;
+  margin: 0 auto; }
+  ul.deal_tab li {
+    flex-grow: 1;
+    /* default 0 */
+    text-align: center;
+    margin-top: -.01rem; }
+    ul.deal_tab li a {
+      display: inline-block;
+      width: 100%;
+      height: .365rem;
+      line-height: .365rem;
+      color: white; }
+  ul.deal_tab li:first-child a {
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem; }
+  ul.deal_tab li:last-child a {
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem; }
+  ul.deal_tab li.active a {
+    border: .01rem solid #3c82ff;
+    background-color: #0097e7;
+    color: white; }
+
+ul.guadanTab {
+  width: 3.5rem;
+  height: .935rem;
+  margin: .2rem auto 0; }
+  ul.guadanTab li {
+    width: 1.8rem;
+    height: .935rem;
+    text-align: center;
+    background-color: #17335c;
+    border: .01rem solid #0097e7;
+    border-radius: .15rem; }
+    ul.guadanTab li i {
+      display: block;
+      width: .3rem;
+      height: .27rem;
+      background-size: 100% 100%;
+      margin: .2rem auto .1rem; }
+    ul.guadanTab li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: white; }
+  ul.guadanTab li:nth-child(2) {
+    margin-left: .1rem; }
+
+/*点对点*/
+.ptpFrom {
+  width: 3.09rem;
+  margin: .1rem auto 0;
+  background-color: #1a294e;
+  border: .01rem solid #0097e7;
+  padding: 0 .2rem .1rem; }
+  .ptpFrom ul {
+    flex-direction: column; }
+    .ptpFrom ul li {
+      height: .48rem;
+      line-height: .48rem;
+      font-size: .12rem;
+      border-bottom: .01rem dashed #0097e7; }
+      .ptpFrom ul li span {
+        display: inline-block;
+        width: .95rem;
+        color: white; }
+      .ptpFrom ul li input {
+        border: none;
+        height: .3rem;
+        line-height: .3rem; }
+
+ul.dealItems {
+  flex-direction: column;
+  padding: 0 .15rem;
+  margin-top: .15rem; }
+  ul.dealItems li {
+    padding: .11rem .2rem;
+    border: .01rem solid #0097e7;
+    margin-top: .15rem; }
+    ul.dealItems li span.btn {
+      padding: .02rem .15rem;
+      margin-top: .1rem; }
+
+.records li span.btn, .dealItems li span.btn {
+  height: .24rem;
+  line-height: .24rem;
+  color: white;
+  border-radius: .12rem; }
+
+.dealRecords {
+  width: 3.35rem;
+  height: 2.12rem;
+  border: .01rem solid #0097e7;
+  margin: .1rem auto;
+  position: relative; }
+  .dealRecords ul.tabs {
+    flex-direction: row;
+    width: 90%;
+    height: .4rem;
+    border-bottom: .01rem solid #163864;
+    position: absolute;
+    top: 0;
+    left: 5%; }
+    .dealRecords ul.tabs li {
+      flex-grow: 1;
+      font-size: .14rem;
+      text-align: center; }
+      .dealRecords ul.tabs li a {
+        display: inline-block;
+        height: .39rem;
+        line-height: .39rem; }
+    .dealRecords ul.tabs li.active {
+      color: #3c82ff; }
+      .dealRecords ul.tabs li.active a {
+        border-bottom: .015rem solid #3c82ff; }
+  .dealRecords ul.records {
+    flex-direction: column;
+    padding: 0 .2rem;
+    overflow: hidden; }
+    .dealRecords ul.records li {
+      flex-grow: 1;
+      border-bottom: .01rem dashed #173964;
+      padding: .1rem;
+      position: relative; }
+      .dealRecords ul.records li a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+        .dealRecords ul.records li a p {
+          line-height: .2rem; }
+      .dealRecords ul.records li span.btn {
+        padding: .02rem .15rem;
+        position: absolute;
+        right: 0;
+        bottom: .1rem; }
+
+/*弹窗*/
+.dlgPayKj, .dlgPayPwd {
+  width: 2.96rem;
+  height: 1.75rem;
+  background-image: url(../../img/bg_tankuang.png);
+  margin-left: -1.5225rem;
+  margin-top: -1.42rem; }
+
+.dialog {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%; }
+  .dialog input {
+    border: .01rem solid #ddd; }
+  .dialog a.btn_close {
+    display: block;
+    width: .22rem;
+    height: .22rem;
+    position: absolute;
+    top: .2rem;
+    right: .1rem; }
+  .dialog .dlg_form {
+    padding: .3rem; }
+    .dialog .dlg_form p {
+      text-align: center; }
+    .dialog .dlg_form input {
+      width: 100%;
+      height: .29rem;
+      float: left;
+      text-indent: .1rem;
+      margin-bottom: .05rem;
+      border: .01rem solid #ddd; }
+    .dialog .dlg_form .optWrap {
+      line-height: .6rem;
+      width: 81%;
+      position: absolute;
+      left: .3rem;
+      bottom: .2rem; }
+      .dialog .dlg_form .optWrap span {
+        display: block;
+        width: .7rem;
+        height: .3rem;
+        line-height: .3rem;
+        color: white;
+        background-color: #0097e7;
+        text-align: center; }
+  .dialog .fgtTradepass {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: .1rem; }
+    .dialog .fgtTradepass span {
+      float: right; }
+
+/*挂单*/
+.guadanItems {
+  text-align: center;
+  border: .01rem solid #0097e7;
+  padding: .2rem .18rem;
+  margin-top: .2rem;
+  text-align: center; }
+  .guadanItems .tip {
+    border: .01rem dashed #666;
+    border-radius: .05rem;
+    text-align: center;
+    height: .3rem;
+    line-height: .3rem; }
+  .guadanItems .price_adjust div.unit_price {
+    /*单价*/
+    display: -webkit-flex;
+    display: flex;
+    height: .365rem;
+    line-height: .365rem;
+    padding: 0 .2rem; }
+    .guadanItems .price_adjust div.unit_price div {
+      width: 72%;
+      border: .01rem solid #fda100;
+      border-radius: .5rem;
+      margin: 0 .1rem;
+      position: relative; }
+    .guadanItems .price_adjust div.unit_price .price_opt {
+      display: inline-block;
+      width: .415rem;
+      height: .355rem;
+      line-height: .355rem;
+      background-color: #fda100;
+      position: absolute;
+      top: -.01rem; }
+    .guadanItems .price_adjust div.unit_price .price_opt.price_down {
+      left: -.01rem;
+      border-top-left-radius: .5rem;
+      border-bottom-left-radius: .5rem; }
+    .guadanItems .price_adjust div.unit_price .price_opt.price_up {
+      right: -.01rem;
+      border-top-right-radius: .5rem;
+      border-bottom-right-radius: .5rem; }
+    .guadanItems .price_adjust div.unit_price input.price_ipt {
+      height: .335rem;
+      width: 1.36rem;
+      color: white;
+      text-align: center;
+      border: none;
+      position: absolute;
+      left: .415rem;
+      top: 0;
+      margin: 0 !important; }
+  .guadanItems .price_adjust .draft_opt {
+    height: .025rem;
+    border-radius: .025rem;
+    background-color: #3c82ff;
+    margin-top: .2rem;
+    padding: 0 .2rem;
+    position: relative; }
+    .guadanItems .price_adjust .draft_opt .circle {
+      display: inline-block;
+      width: .1rem;
+      height: .111rem;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 0 .025rem white;
+      position: absolute;
+      top: -.04rem;
+      left: .1rem;
+      z-index: 100; }
+  .guadanItems .price_adjust input {
+    width: .71rem;
+    height: .26rem;
+    line-height: .3rem;
+    border-radius: .05rem;
+    margin: .2rem 0 .15rem; }
+  .guadanItems span.btn {
+    width: 1rem;
+    height: .3rem;
+    text-align: center;
+    line-height: .3rem;
+    color: white;
+    background-color: #3c82ff;
+    border-radius: .2rem; }
+
+.dlgMsg {
+  width: 3rem;
+  height: 2.5rem;
+  background-color: white;
+  border-radius: .05rem;
+  margin-left: -1.5rem;
+  margin-top: -1.25rem; }
+  .dlgMsg .btn_close {
+    top: .1rem;
+    right: .05rem; }
+  .dlgMsg ul {
+    flex-direction: column; }
+    .dlgMsg ul li {
+      flex-grow: 1;
+      line-height: .3rem; }

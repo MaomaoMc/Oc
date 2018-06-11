@@ -1,0 +1,51 @@
+div.item{
+    height: 1.2rem;
+    border-bottom: .01rem solid #0e5b94;
+    div.goodPic{
+        width: .6rem;
+         height: .6rem; 
+         border-radius: 50%;
+         background-size: 100% 100%;
+         margin: .3rem .2rem;
+    }
+    div.goodItem{
+        width: 70%;
+        padding: .05rem 0;
+        position: relative;
+        h6{
+            line-height: .4rem;
+            color: #0097e7;
+        }
+        p{
+            line-height: .2rem;
+        }
+        p::before{
+            content: "";
+            display: inline-block;
+            width: .05rem;
+            height: .05rem;
+            background-color: #ffa900;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: .05rem;
+        }
+        .cart{
+            height: .25rem;
+            line-height: .25rem;
+            color: white;
+            background-color: #5bcb00;
+            border-radius: .15rem;
+            padding: 0 .1rem;
+            position: absolute;
+            right: .19rem;
+            .cart_icon{
+                display: inline-block;
+                width: .12rem;
+                height: .115rem;
+                background-image: url(../../img/icon_goumai.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}
