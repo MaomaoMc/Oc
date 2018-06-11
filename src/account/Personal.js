@@ -53,24 +53,24 @@ const accountMenus = [
         component: SystemSet,
         text: "系统设置"
     },
-    {
-        pic: require("../img/icon_wdkj_nor.png"),
-        link: "/account/myMineral",
-        component: MyMineral,
-        text: "我的矿机"
-    },
-    {
-        pic: require("../img/icon_qhb_nor.png"),
-        link: "/account/robPacket",
-        component: RobPacket,
-        text: "挂红包"
-    },
-    {
-        pic: require("../img/icon_swsc_nor.png"),
-        link: "/account/swMarket",
-        component: SwMarket,
-        text: "商城"
-    },
+    // {
+    //     pic: require("../img/icon_wdkj_nor.png"),
+    //     link: "/account/myMineral",
+    //     component: MyMineral,
+    //     text: "我的矿机"
+    // },
+    // {
+    //     pic: require("../img/icon_qhb_nor.png"),
+    //     link: "/account/robPacket",
+    //     component: RobPacket,
+    //     text: "挂红包"
+    // },
+    // {
+    //     pic: require("../img/icon_swsc_nor.png"),
+    //     link: "/account/swMarket",
+    //     component: SwMarket,
+    //     text: "商城"
+    // },
     // {
     //     pic: require("../img/icon_ykcz_nor.png"),
     //     picActive: require("../img/icon_ykcz_hot.png"),
@@ -158,14 +158,16 @@ class Personal extends Component {
         return <div>
             <Title title="个人中心" code = {this.state.code}/>
             <div className="assetTotal">
-            <div style={{height: '100%', padding:  '0 .5rem'}}>
-                <p className="fc_white fz_30 text_center" style={{lineHeight: '.35rem'}}>资产总额</p>
-                <p className="fc_yellow fz_70 text_center" style={{lineHeight: '.75rem'}}>{data.total}</p>
-                <div className="fc_30 fz_30 text_center over_hidden">
-                    <span className="fc_blue f_lt"><span>可用JSD：</span><span className="fc_white">{parseFloat(data.jd_num).toFixed(2)}</span></span>
-                    <span className="fc_blue f_rt"><span>冻结JSD：<span className="fc_white">{parseFloat(data.djd_num).toFixed(2)}</span></span></span>
+                <div style={{height: '100%', padding:  '0 .5rem'}}>
+                    <p className="fc_yellow fz_70 text_center" style={{padding: ".2rem 0 .1rem"}}>{data.money}</p>
+                    <p className="fc_30 fz_30">
+                        <span className="fc_blue"><i className = "icon icon_money"></i>可用JSD：<span className="fc_white">{parseFloat(data.jd_num).toFixed(2)}</span></span>
+                        
+                    </p>
+                    <p className="fc_30 fz_30" style = {{marginTop: ".1rem"}}>
+                        <span className="fc_blue"><i className = "icon icon_dmoney"></i>冻结JSD：<span className="fc_white">{parseFloat(data.djd_num).toFixed(2)}</span></span>
+                    </p>
                 </div>
-            </div>
             </div>
            <div className="account_menus f_flex">
             {
@@ -174,7 +176,7 @@ class Personal extends Component {
                         <Link to = {item.link}>
                             <span className="icon" style={{backgroundImage: "url(" + item.pic + ")"}} activestyle={{backgroundImage: "url(" + item.picActive + ")"}}></span>
                         </Link>
-                        <div className="text fz_26 mt_10">{item.text}</div>
+                        <div className="text fz_26 mt_10 fc_white">{item.text}</div>
                     </div>
                 })
             }

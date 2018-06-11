@@ -173,7 +173,7 @@ class Certify extends Component{
                                     this.uploadedFile({type: "front_pic"})
                                 }}></input>
                                     <img className="card_front" src={this.state.z_idpic} alt=""/>
-                                    {this.state.z_idpic !== "" ? null : <span>+身份证正面照</span>}
+                                    {this.state.z_idpic !== "" ? null : <span className = "fc_blue">+身份证正面照</span>}
                             
                             </p>
                             <p>
@@ -181,7 +181,7 @@ class Certify extends Component{
                                     this.uploadedFile({type: "behind_pic"})
                                 }}></input>
                                 <img className="card_behind" src={this.state.f_idpic} alt=""/>
-                                {this.state.f_idpic !== "" ? null : <span>+身份证反面照</span>}
+                                {this.state.f_idpic !== "" ? null : <span className = "fc_blue">+身份证反面照</span>}
                             </p>
                         </form>
                 <span className="btn btn_primary login_btn h_80 fz_26 f_lt mt_50" style={{ width: '95%' }}

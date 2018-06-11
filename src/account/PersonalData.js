@@ -7,13 +7,14 @@ import Tab from '../Tab';
 import WarningDlg from './../WarningDlg';
 
 const baseUrl = window.baseUrl;
+const head_pic = require("../img/head_pic.png")
 class PersonalData extends Component {
     constructor (props){
         super(props);
         const sundryData = localStorage.getItem("sundryData");
         const token = localStorage.getItem("token");
         this.state = {
-            profile_pic: (baseUrl + JSON.parse(sundryData).adminpic), //头像
+            profile_pic: (baseUrl + JSON.parse(sundryData).adminpic) || head_pic, //头像
             head_pic: "",
             sundryData: sundryData,
             token: token,
@@ -116,36 +117,54 @@ class PersonalData extends Component {
     render (){
         const data = this.state.data;
         const profile_pic = this.state.profile_pic;
+        const head_pic = profile_pic === "" ? (baseUrl + JSON.parse(this.state.sundryData).adminpic) : profile_pic;
+        console.log(head_pic, 'sda')
         return <div className="personalData">
             <Title title="个人资料" code = {this.state.code}/>
-            <div className="assetTotal">
-                <div className="file" style = {{paddingTop: ".45rem"}}>
+            <div className="personData">
+                <div style = {{paddingTop: ".1rem", marginBottom: ".1rem"}}>
+                    <div className="boxF">
+                        <div className="boxS">
+                            <form action="" id="form" class = "boxT" style={{backgroundImage: "url(" + head_pic + ")"}}> 
+                                <input type="file" name="photo" id="photo" 
+                                    onChange = {e => {this.uploadedFile({value: e.target.value, obj: e.target})}}
+                                    />
+                                    {/* <img src={profile_pic === "" ? (baseUrl + JSON.parse(this.state.sundryData).adminpic) : profile_pic} alt=""/> */}
+                            </form>
+                            {/* <div className="boxT" style={{backgroundImage: "url(" + head_pic + ")"}}>
+                                <div className="overlay">
+                                    <a href="#">+</a>
+                                </div>
+                            </div> */}
+                        </div>
+                    </div>
+                </div>
+                {/* <div className="file" style = {{backgroundImage: "url(" + head_pic + ")"}}>
                     <form action="" id="form"> 
                         <input type="file" name="photo" id="photo" 
                             onChange = {e => {this.uploadedFile({value: e.target.value, obj: e.target})}}
-                            />
-                            <img style = {{marginTop: ".15rem"}} src={profile_pic === "" ? (baseUrl + JSON.parse(this.state.sundryData).adminpic) : profile_pic} alt=""/>
-                    </form>
-                </div> 
-                <p className = "fc_white fz_30">ID: {}</p> 
+                            /> */}
+                            {/* <img src={profile_pic === "" ? (baseUrl + JSON.parse(this.state.sundryData).adminpic) : profile_pic} alt=""/> */}
+                    {/* </form>
+                </div>  */}
                 <ul className="fz_30 f_flex overview">
                     <li>
-                        <p className="fc_blue">上级ID</p>
-                        <p>{data.tui_num}</p>
+                        <p className="fc_y">上级ID</p>
+                        <p className = "fc_white">{data.tui_num}</p>
                     </li>
                     <li>
-                        <p className="fc_blue">我的ID</p>
-                        <p>{data.id_num}</p>
+                        <p className="fc_y">我的ID</p>
+                        <p className = "fc_white">{data.id_num}</p>
                     </li>
                     <li>
-                        <p className="fc_blue">等级</p>
-                        <p>{data.level_msg}</p>
+                        <p className="fc_y">等级</p>
+                        <p className = "fc_white">{data.level_msg}</p>
                     </li>
                 </ul>
             </div>
             <ul className="lists f_flex fz_26 mb_100">
                 <li>
-                    <span className="f_lt">手机号验证</span>
+                    <span className="f_lt fc_white">手机号验证</span>
                     <span className="f_rt">
                         <span className="fc_blue">{data.phone}</span>
                         {data.phone !== "" ?
@@ -157,12 +176,12 @@ class PersonalData extends Component {
                 </li>
                 <li>
                     {data.bank_num === "" ? <Link to = "/account/creditCertify/unauthorized">
-                        <span className="f_lt">银行卡</span>
+                        <span className="f_lt fc_white">银行卡</span>
                         <span className="f_rt">
                             <span className="fc_blue">{data.bank_num}</span>
                             <span className="mark unauthorized">未认证</span>
                         </span>
-                    </Link> :  <Link to = "/account/creditCertify/authorized"><span><span className="f_lt fc_blue">银行卡</span>
+                    </Link> :  <Link to = "/account/creditCertify/authorized"><span><span className="f_lt fc_white">银行卡</span>
                             <span className="f_rt">
                                 <span className="fc_blue">{data.bank_num}</span>
                                 <span className="mark authenticated">已认证</span> 
@@ -172,12 +191,12 @@ class PersonalData extends Component {
                 </li>
                 <li>
                     {data.username === "" ? <Link to = "/account/certify/unauthorized">
-                        <span className="f_lt">实名认证</span>
+                        <span className="f_lt fc_white">实名认证</span>
                         <span className="f_rt">
                             <span className="fc_blue">{data.username}</span>
                             <span className="mark unauthorized">未认证</span>
                         </span>
-                    </Link> :  <Link to = "/account/certify/authorized"><span><span className="f_lt fc_blue">实名认证</span>
+                    </Link> :  <Link to = "/account/certify/authorized"><span><span className="f_lt fc_white">实名认证</span>
                             <span className="f_rt">
                                 <span className="fc_blue">{data.username}</span>
                                 <span className="mark authenticated">已认证</span> 
@@ -195,7 +214,7 @@ class PersonalData extends Component {
                 </li>
                 <li style={{height: ".21rem"}}></li>
                 <li>
-                    {data.wx_num === "" ? <Link to="/account/weChatBind">
+                    {data.wx_num !== "" ? <Link to="/account/weChatBind">
                         <span className="f_lt">微信</span>
                         <span className="f_rt">
                             <span className="mark unauthorized">未认证</span>
