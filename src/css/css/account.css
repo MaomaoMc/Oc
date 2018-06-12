@@ -137,8 +137,7 @@
       top: 0;
       left: 0; }
   .personData .boxF, .personData .boxS, .personData .boxT, .personData .overlay, .personData input {
-    width: .76rem;
-    height: .95rem;
+    width: .9rem;
     overflow: hidden; }
   .personData .boxF, .personData .boxS {
     visibility: hidden; }

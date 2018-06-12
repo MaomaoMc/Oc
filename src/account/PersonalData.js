@@ -7,14 +7,14 @@ import Tab from '../Tab';
 import WarningDlg from './../WarningDlg';
 
 const baseUrl = window.baseUrl;
-const head_pic = require("../img/head_pic.png")
+const head_picBg = require("../img/head_pic.png")
 class PersonalData extends Component {
     constructor (props){
         super(props);
         const sundryData = localStorage.getItem("sundryData");
         const token = localStorage.getItem("token");
         this.state = {
-            profile_pic: (baseUrl + JSON.parse(sundryData).adminpic) || head_pic, //头像
+            profile_pic: (baseUrl + JSON.parse(sundryData).adminpic) || "", //头像
             head_pic: "",
             sundryData: sundryData,
             token: token,
@@ -122,10 +122,11 @@ class PersonalData extends Component {
         return <div className="personalData">
             <Title title="个人资料" code = {this.state.code}/>
             <div className="personData">
-                <div style = {{paddingTop: ".1rem", marginBottom: ".1rem"}}>
+                <p style = {{height: ".1rem"}}></p>
+                <div style = {{width: "1.34rem", height: "1.12rem", backgroundImage: "url(" + head_picBg + ")", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%", margin: "0 auto .1rem"}}>
                     <div className="boxF">
                         <div className="boxS">
-                            <form action="" id="form" class = "boxT" style={{backgroundImage: "url(" + head_pic + ")"}}> 
+                            <form action="" id="form" className= "boxT" style={{backgroundImage: "url(" + head_pic + ")"}}> 
                                 <input type="file" name="photo" id="photo" 
                                     onChange = {e => {this.uploadedFile({value: e.target.value, obj: e.target})}}
                                     />
