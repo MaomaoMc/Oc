@@ -90,7 +90,7 @@ class Bill extends Component {
         const self = this;
         const data = this.state.data;
         const money = this.state.money;
-        return <div style = {{backgroundColor: "white"}}>
+        return <div>
             <Title title="账单中心" code = {this.state.code}/>
           <ul className="billTab f_flex">
           {
@@ -111,7 +111,7 @@ class Bill extends Component {
                   return <li key={i}>
                     <span></span><br/>
                     <p>
-                        <span className="f_lt">{bill.content}<span className = "fc_blue ml_10">{type === 1 ? "+" : "-"}{parseFloat(bill.money).toFixed(2)}</span></span>
+                        <span className="f_lt fc_white">{bill.content}<span className = "fc_blue ml_10">{type === 1 ? "+" : "-"}{parseFloat(bill.money).toFixed(2)}</span></span>
                         <span className="f_rt">{bill.add_time}</span>
                     </p>
                 </li>

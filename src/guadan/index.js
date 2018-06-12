@@ -293,7 +293,7 @@ class GuaDan extends Component {
 
                         />
                         <p className="fc_blue fz_26">买入{count}E币，出价{this.state.price}，总价{Math.round(parseFloat(count * this.state.price) * 100) / 100}元</p>
-                        <span className="btn" style={{ margin: '.1rem auto' }}
+                        <span className="btn btn_orange" style={{ margin: '.1rem auto' }}
                             onClick={e => {
                                 this.handleBuyJd()
                             }}
@@ -321,7 +321,7 @@ class GuaDan extends Component {
             <div className={this.state.dlgShow ? "dialog dlgPayPwd" : "dialog dlgPayPwd hide"}>
                 <div className="dlg_form">
                     <p className="text_center fz_32 mb_10">请输入支付密码：</p>
-                    <input type="password" value = {this.state.tradePassPwd} 
+                    <input type="password" value = {this.state.tradePassPwd} placeholder = "请输入支付密码"
                     onChange = {e => {
                         this.handlePwdEvent({val: e.target.value})
                     }}

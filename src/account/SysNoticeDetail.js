@@ -64,7 +64,7 @@ class SysNoticeDetail extends Component{
         const notice = JSON.parse(localStorage.getItem("sysNotCont"))
         return <div>
             <Title title = "系统通知"/>
-            <div style = {{backgroundColor: "white", lineHeight: ".3rem", padding: ".16rem"}}>
+            <div style = {{lineHeight: ".3rem", padding: ".16rem"}}>
                 <p className="fc_blue fz_24 text_center">{notice.title}</p>
                 <p className = "fz_20 text_center">{notice.add_time}</p>
                 <p className = "fz_20" style = {{textIndent: ".1rem"}} dangerouslySetInnerHTML = {{__html: notice.content}}></p>

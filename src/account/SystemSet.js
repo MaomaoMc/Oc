@@ -51,7 +51,7 @@ class SystemSet extends Component{
                     </Link>
                 </li>
                 <li>
-                    <span className="f_lt">当前版本</span>
+                    <span className="f_lt fc_white">当前版本</span>
                     <span className="f_rt">
                     <span>1.14</span>
                     </span>

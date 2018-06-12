@@ -168,7 +168,7 @@ class MachineM extends Component {
         }
         return <div>
             <Title  title="机市" code = {this.state.code}/>
-            <div style = {{marginBottom: ".2rem", padding: "0 .1rem .5"}}>
+            <div style = {{marginBottom: ".8rem", padding: "0 .1rem .5"}}>
                 {/* <p className = "fc_white" style = {{fontSize: ".2rem", fontWeight: 600, textIndent: ".2rem", margin: ".1rem 0"}}>积分矿机</p> */}
                 {/* <div>
                 {
@@ -204,7 +204,7 @@ class MachineM extends Component {
                             <div className="goodItem f_lt">
                                 <h6 className="fz_30">{item.name}</h6>
                                 <div>
-                                    <div className="f_lt fz_22">
+                                    <div className="f_lt fz_22 fc_gray">
                                         <p>算力：{item.force}</p>
                                         <p>运行周期：{item.time}</p>
                                         <p>收益总量：{item.earning}</p>

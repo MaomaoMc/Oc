@@ -240,6 +240,7 @@ ul.dealItems{
             height: .29rem;
             float: left;
             text-indent: .1rem;
+            color: white;
             margin-bottom: .05rem;
             border: .01rem solid #ddd;
         }
@@ -355,15 +356,6 @@ ul.dealItems{
             border-radius: .05rem;
             margin: .2rem 0 .15rem;
         }
-    }
-    span.btn{
-        width: 1rem;
-        height: .3rem;
-        text-align: center;
-        line-height: .3rem;
-        color: white;
-        background-color: #3c82ff;
-        border-radius: .2rem;
     }
 }
 .dlgMsg{  //买家信息 卖家信息

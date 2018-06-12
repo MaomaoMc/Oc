@@ -244,8 +244,8 @@ class DealRecords extends Component {
                     }}
                     />
                     <div className="fgtTradepass"><Link to = "/account/forgetTradePwd"><span className="fz_24 fc_blue">忘记交易密码?</span></Link></div>
-                    <div className="optWrap f_flex">
-                        <span className="btn fz_32 f_lt" style = {{color: "#e73b38"}} onClick = {e => {
+                    <div className="optWrap">
+                        <span className="btn fz_32 f_lt" onClick = {e => {
                             self.handlePayPwd({type: "cancel"})
                         }}>取消</span>
                         <span className="btn fz_32 f_rt" onClick = {e => {
