@@ -133,7 +133,7 @@ class MyMineral extends Component  {
                         <p className = "fz_50">{(my_data.myforce * 1).toFixed(2)}</p>
                     </li>
                     <li>
-                        <p className = "fz_30">个人产量(E币/天)</p>
+                        <p className = "fz_30">个人产量(OC币/天)</p>
                         <p className = "fz_50">{(my_data.nhuw * 1).toFixed(2)}</p>
                     </li>
                 </ul>

@@ -256,7 +256,7 @@ class GuaDan extends Component {
             }
         ];
         return <div>
-            <Title title={this.state.page_type === "1" ? "新手挂单区" : "高手挂单区"} code = {this.state.code}/>
+            <Title title={this.state.page_type === "1" ? "普通挂单区" : "溢价挂单区"} code = {this.state.code}/>
             <div style={{ marginBottom: ".4rem", width: "96%", marginLeft: "2%" }}>
                 <div className="guadanItems">
                     <div className="tip fz_26">{this.state.tip}</div>
@@ -268,7 +268,11 @@ class GuaDan extends Component {
                         <div className="unit_price">
                             <span >减价</span>
                             <div className="inline_block">
-                                <span className="price_ipt">{this.state.price}</span>
+                                <input className="price_ipt" value = {this.state.price} onChange = {e => {
+                                    this.setState({
+                                        price: e.target.value
+                                    })
+                                }}/>
                                 <span className="price_opt price_down fc_white"
                                     onClick={e => {
                                         this.handlePrice({ type: "reduce" })
@@ -292,7 +296,7 @@ class GuaDan extends Component {
                             }}
 
                         />
-                        <p className="fc_blue fz_26">买入{count}E币，出价{this.state.price}，总价{Math.round(parseFloat(count * this.state.price) * 100) / 100}元</p>
+                        <p className="fc_blue fz_26">买入{count}OC币，出价{this.state.price}，总价{Math.round(parseFloat(count * this.state.price) * 100) / 100}元</p>
                         <span className="btn btn_orange" style={{ margin: '.1rem auto' }}
                             onClick={e => {
                                 this.handleBuyJd()

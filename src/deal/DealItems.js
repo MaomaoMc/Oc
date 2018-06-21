@@ -173,7 +173,7 @@ class DealItems extends Component {
                                 <span className="fc_blue">单号：{item.trade_num}</span>
                                 {/* <span className="f_rt">ID：{item.id_num}</span> */}
                             </p>
-                            <p style={{lineHeight: ".3rem"}}>挂买{num}E币，单价{price}元，
+                            <p style={{lineHeight: ".3rem"}}>挂买{num}OC币，单价{price}元，
                                 <span className="btn f_rt btn_primary" onClick = { e => {
                                     self.handleSellEvent({trade_id: item.trade_id})
                                 }}>卖给他</span>

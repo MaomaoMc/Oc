@@ -213,7 +213,7 @@ class MachineM extends Component {
                                             self.handleBayEvent({id: item.id})
                                         }}>
                                         <i className="cart_icon"></i>
-                                       <span> {item.price} E币</span>
+                                       <span> {item.price} OC币</span>
                                     </div>
                                 </div>
                             </div>

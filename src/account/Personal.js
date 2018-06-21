@@ -53,24 +53,24 @@ const accountMenus = [
         component: SystemSet,
         text: "系统设置"
     },
-    // {
-    //     pic: require("../img/icon_wdkj_nor.png"),
-    //     link: "/account/myMineral",
-    //     component: MyMineral,
-    //     text: "我的矿机"
-    // },
-    // {
-    //     pic: require("../img/icon_qhb_nor.png"),
-    //     link: "/account/robPacket",
-    //     component: RobPacket,
-    //     text: "挂红包"
-    // },
-    // {
-    //     pic: require("../img/icon_swsc_nor.png"),
-    //     link: "/account/swMarket",
-    //     component: SwMarket,
-    //     text: "商城"
-    // },
+    {
+        pic: require("../img/icon_wdkj.png"),
+        link: "/account/myMineral",
+        component: MyMineral,
+        text: "我的矿机"
+    },
+    {
+        pic: require("../img/icon_qhb.png"),
+        link: "/account/robPacket",
+        component: RobPacket,
+        text: "刮红包"
+    },
+    {
+        pic: require("../img/icon_swsc.png"),
+        link: "/account/swMarket",
+        component: SwMarket,
+        text: "商城"
+    },
     // {
     //     pic: require("../img/icon_ykcz_nor.png"),
     //     picActive: require("../img/icon_ykcz_hot.png"),
@@ -161,11 +161,11 @@ class Personal extends Component {
                 <div style={{height: '100%', padding:  '0 .5rem'}}>
                     <p className="fc_yellow fz_70 text_center" style={{padding: ".2rem 0 .1rem"}}>{data.money}</p>
                     <p className="fc_30 fz_30">
-                        <span className="fc_blue"><i className = "icon icon_money"></i>可用JSD：<span className="fc_white">{parseFloat(data.jd_num).toFixed(2)}</span></span>
+                        <span className="fc_blue"><i className = "icon icon_money"></i>可用OC币：<span className="fc_white">{parseFloat(data.jd_num).toFixed(2)}</span></span>
                         
                     </p>
                     <p className="fc_30 fz_30" style = {{marginTop: ".1rem"}}>
-                        <span className="fc_blue"><i className = "icon icon_dmoney"></i>冻结JSD：<span className="fc_white">{parseFloat(data.djd_num).toFixed(2)}</span></span>
+                        <span className="fc_blue"><i className = "icon icon_dmoney"></i>冻结OC币：<span className="fc_white">{parseFloat(data.djd_num).toFixed(2)}</span></span>
                     </p>
                 </div>
             </div>
